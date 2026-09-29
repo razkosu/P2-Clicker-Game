@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://clxiw1hgi18tv"]
+
+[ext_resource type="Texture2D" uid="uid://bmheehrhabodv" path="res://Assets/money.jpg" id="1_gq5ct"]
+[ext_resource type="Script" uid="uid://x7pwawylux5q" path="res://Scripts/clicker_button.gd" id="2_sqexo"]
+[ext_resource type="PackedScene" uid="uid://cj2e7cmlsmo5p" path="res://Scenes/dollar.tscn" id="3_rufjq"]
+
+[node name="ClickerButton" type="Button" unique_id=1148025388]
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 467.0
+offset_bottom = 464.0
+icon = ExtResource("1_gq5ct")
+script = ExtResource("2_sqexo")
+dol = ExtResource("3_rufjq")
+
+[node name="UpgradeButton" type="Button" parent="." unique_id=1964634586]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 52.0
+offset_right = 296.0
+offset_bottom = 87.0
+text = "Upgrade"
+
+[connection signal="pressed" from="UpgradeButton" to="." method="_on_upgrade_button_pressed"]

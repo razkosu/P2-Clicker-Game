@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://vctk3uv2yg8n"]
+
+[ext_resource type="Script" uid="uid://che5mh73w5t4y" path="res://Scripts/game_manager.gd" id="1_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://clxiw1hgi18tv" path="res://Scenes/clicker.tscn" id="2_3dryh"]
+[ext_resource type="Texture2D" uid="uid://sahgslyafxk4" path="res://Assets/background.png" id="2_wowpa"]
+[ext_resource type="PackedScene" uid="uid://becddl8chgqm6" path="res://Scenes/generator.tscn" id="3_wrm1d"]
+
+[node name="Game" type="Control" unique_id=1485716657]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wrm1d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=208352611]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 650.0
+texture = ExtResource("2_wowpa")
+
+[node name="ClickerButton" parent="." unique_id=1148025388 node_paths=PackedStringArray("game_manager") instance=ExtResource("2_3dryh")]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 101.0
+offset_right = 604.0
+offset_bottom = 556.0
+game_manager = NodePath("..")
+
+[node name="CoinLabel" type="Label" parent="." unique_id=1678867146]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 22.0
+offset_right = 331.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 36
+text = "Money Yippee: 0"
+
+[node name="Generator" parent="." unique_id=921572605 node_paths=PackedStringArray("game_manager") instance=ExtResource("3_wrm1d")]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 143.0
+offset_right = 954.0
+offset_bottom = 441.0
+game_manager = NodePath("..")
+
+[connection signal="pressed" from="ClickerButton" to="ClickerButton" method="_on_pressed"]

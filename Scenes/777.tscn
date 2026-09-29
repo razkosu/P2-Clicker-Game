@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bywa56u2o74h"]
+
+[ext_resource type="Texture2D" uid="uid://dfdwcv7ra4yif" path="res://Assets/777.jpg" id="1_iucis"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkbbt"]
+size = Vector2(50, 28)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1023279120]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1517296890]
+position = Vector2(25, 14)
+shape = SubResource("RectangleShape2D_lkbbt")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1547964832]
+position = Vector2(10, 10)
+rect = Rect2(-10, -10, 50, 28)
+
+[node name="777" type="Sprite2D" parent="." unique_id=384841888]
+position = Vector2(25, 14)
+texture = ExtResource("1_iucis")
