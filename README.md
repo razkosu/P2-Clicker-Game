@@ -8,7 +8,7 @@ Made by **Kaleb Raz**
 ---
 
 ## How to Play
-- **Play in Browser:** [Click here](https://razk777.itch.io/p2-clicker-game) to open in itch.io
+- **Play in Browser:** [Click here](https://razk777.itch.io/p2-clicker-game-2) to open in itch.io
 
 ---
 
